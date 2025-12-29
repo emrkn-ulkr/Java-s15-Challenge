@@ -21,7 +21,6 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
 
 ### Sistemde mutlaka Olmasını İstediklerimiz Nelerdir?
 
-* Bütün projeniz object oriented design kullanılarak tasarlanmalı ve kodlanmalı.
 * Sınıflarınız arasındaki tüm hiyaraşik yapıyı çizili bir biçimde göstermelisiniz.
 * Projenizde anlamlı paketler oluşturmalı be paketlemeye dikkat etmelisiniz.
 * Oluşturduğunuz tüm sınıflar Encapsulation kurallarına uygun yazılmalı.
@@ -38,7 +37,7 @@ Bütün sistemi bir konsol uygulaması olarak dizayn etmelisiniz.(Scanner sını
 * Sisteme yeni kitap eklenebilir.
 * Sistemden id, isim veya yazar bilgisine göre bir kitap seçilebilir
 * Sistemde var olan bir kitabın bilgileri güncellenebilir.
-* Sistemde var olan bir kitap silinebilir.
+* Sistemde var olan bir kitap silinebilir.s
 * Sistemde var olan bir kategorideki tüm kitaplar listelenebilir.
 * Sistemde var olan bir yazarın tüm kitapları listelenebilir
 * Bir kullanıcı sistemde eğer kitap kütüphanede varsa ve başkası tarafından alınmadıysa bir kitabı ödünç alabilir. Bu durum yaşanırsa hangi kitabın hangi kullanıcıda olduğunun bilgisi tutulmalıdır.

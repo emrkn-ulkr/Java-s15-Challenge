@@ -14,7 +14,7 @@ public class Library {
     private Set<Reader> readers = new HashSet<>();
     private Map<Book, Reader> borrowedBooks = new HashMap<>();
 
-    // ---------- ADD ----------
+  
     public void addBook(Book book) {
         books.put(book.getId(), book);
     }
@@ -23,30 +23,35 @@ public class Library {
         readers.add(reader);
     }
 
-    // ---------- FIND ----------
     public Book findBookById(int id) {
         return books.get(id);
     }
 
     public void findByTitle(String title) {
-        books.values().stream()
-                .filter(b -> b.getTitle().equalsIgnoreCase(title))
-                .forEach(System.out::println);
+        for (Book b : books.values()) {
+            if (b.getTitle().equalsIgnoreCase(title)) {
+                System.out.println(b);
+            }
+        }
     }
 
     public void listByAuthor(String author) {
-        books.values().stream()
-                .filter(b -> b.getAuthor().equalsIgnoreCase(author))
-                .forEach(System.out::println);
+        for (Book b : books.values()) {
+            if (b.getAuthor().equalsIgnoreCase(author)) {
+                System.out.println(b);
+            }
+        }
     }
 
     public void listByType(String type) {
-        books.values().stream()
-                .filter(b -> b.getType().equalsIgnoreCase(type))
-                .forEach(System.out::println);
+        for (Book b : books.values()) {
+            if (b.getType().equalsIgnoreCase(type)) {
+                System.out.println(b);
+            }
+        }
     }
 
-    // ---------- UPDATE ----------
+
     public void updateBook(int id, String newTitle, String newAuthor, double newPrice) {
         Book book = books.get(id);
         if (book != null && book.isAvailable()) {
@@ -56,7 +61,6 @@ public class Library {
         }
     }
 
-    // ---------- REMOVE ----------
     public void removeBook(int id) {
         Book book = books.get(id);
         if (book != null && book.isAvailable()) {
@@ -64,7 +68,7 @@ public class Library {
         }
     }
 
-    // ---------- BORROW ----------
+
     public void borrowBook(int id, Reader reader) {
         Book book = books.get(id);
 
@@ -80,7 +84,7 @@ public class Library {
         }
     }
 
-    // ---------- RETURN ----------
+
     public void returnBook(int id, Reader reader) {
         Book book = books.get(id);
 
@@ -92,7 +96,7 @@ public class Library {
         }
     }
 
-    // ---------- LIST ----------
+    
     public void listAll() {
         books.values().forEach(System.out::println);
     }

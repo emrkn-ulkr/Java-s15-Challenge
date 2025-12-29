@@ -17,7 +17,7 @@ public abstract class Book {
         this.price = price;
     }
 
-    // 🔥 Polymorphism point
+
     public abstract String getType();
 
     public void borrow() {
@@ -32,7 +32,7 @@ public abstract class Book {
         return status == BookStatus.AVAILABLE;
     }
 
-    // -------- GETTERS --------
+
 
     public Integer getId() {
         return id;
@@ -50,7 +50,7 @@ public abstract class Book {
         return price;
     }
 
-    // -------- SETTERS --------
+
 
     public void setTitle(String title) {
         this.title = title;
